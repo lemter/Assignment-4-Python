@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Assignment 3 - Auth</title>
+        <link rel="stylesheet" type="text/css" href="static/general.css">
+    </head>
+    <body>
+        <div class="login_box">
+            <h2>Authentication</h2>
+            <input id="login" type="text" placeholder="Login">
+            <input id="pass" type="password" placeholder="Password">
+            <div>
+                <button onclick="server.login(document.getElementById('login').value, document.getElementById('pass').value)">Log-in</button>
+                <button onclick="server.regist(document.getElementById('login').value, document.getElementById('pass').value)">Registration</button>
+            </div>
+        </div>
+    </body>
+</html>

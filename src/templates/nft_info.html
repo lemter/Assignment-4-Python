@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>NFT - {{fetch[2]}}</title>
+        <link rel="stylesheet" type="text/css" href="static/general.css">
+    </head>
+    <body>
+        <div><a href="/">Back to main page</a></div>
+        <img src={{metadata["image"]}} width="20%">
+        <h3>{{fetch[2]}}</h3>
+        <p>Token address: {{fetch[0]}}</p>
+        <p>Token metadata standard: {{fetch[1]}}</p>
+        <p>Symbol: {{fetch[3]}}</p>
+        <p>Description: {{metadata["description"]}}</p>
+        <br>
+        <p>Seller fee basis points: {{metaplex[3]}}</p>
+        <p>Primary sale happed: {{metaplex[4]}}</p>
+        <br>
+        <table>
+            <tr><th>Attributes</th></tr>
+            <th>Attribute</th>
+            <th>Value</th>
+            {% for i in metadata["attributes"] %}
+            <tr>
+                <td>{{i["trait_type"]}}</td>
+                <td>{{i["value"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <table>
+            <tr><th>Owners</th></tr>
+            <th>Address</th>
+            <th>Is verified?</th>
+            <th>Share</th>
+            {% for i, address, verified, share in owners %}
+            <tr>
+                <td>{{address}}</td>
+                <td>{{verified}}</td>
+                <td>{{share}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

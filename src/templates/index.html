@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Assignment 3</title>
+        <link rel="stylesheet" type="text/css" href="static/general.css">
+    </head>
+    <body>
+        <p class="username" onclick="server.deauth()">{{username}}</p>
+        <div class="search_box">
+            <h2>Assignment 3</h2>
+            <input id="nft_address" type="text" placeholder="NFT address">
+            <div><button onclick="server.getInfo(document.getElementById('nft_address').value)">Get Info</button></div>
+        </div>
+    </body>
+</html>

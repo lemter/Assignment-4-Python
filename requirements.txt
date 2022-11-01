@@ -1,0 +1,7 @@
+Install Python 3
+Install packages:
+- requests
+- flask
+- psycopg2
+- jyserver
+- json
